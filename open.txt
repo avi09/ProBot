@@ -1,0 +1,4 @@
+office--__sudo libreoffice
+notepad--__sudo gedit
+
+gedit--__sudo gedit
