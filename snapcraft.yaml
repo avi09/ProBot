@@ -1,0 +1,48 @@
+name: probot
+version: '1.0'
+summary: ChatBot
+description: |
+  ProBot is an interactive ChatBot to help with day to day tasks on general desktop and mobile environments.
+base: core18
+confinement: strict
+grade: stable
+
+parts:
+  probot:
+    plugin: python
+    python-version: python3
+    source: .
+    python-packages:
+      - Cython
+      - kivy
+    stage-packages:
+      - build-essential
+      - libxrender1
+      - libgl1-mesa-glx
+      - mesa-utils
+      - locales-all
+      - dbus-x11
+    build-packages:
+      - libdbus-1-dev
+
+apps:
+  probot:
+    command: python3 bin/probot.py
+    environment:
+      LD_LIBRARY_PATH: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/dri:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/mesa:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/mesa-gl:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/xorg:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio/
+      LIBGL_DRIVERS_PATH: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/dri
+      TMPDIR: $XDG_RUNTIME_DIR
+      DBUS_SESSION_BUS_ADDRESS: $DBUS_SESSION_BUS_ADDRESS
+    extensions: [gnome-3-34]
+
+    plugs:
+    - browser-support
+    - network
+    - network-bind
+    - desktop
+    - desktop-legacy
+    - home
+    - opengl
+    - unity7
+    - wayland
+    - x11

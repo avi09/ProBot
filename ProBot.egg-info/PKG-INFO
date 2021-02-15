@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: ProBot
+Version: 0.1
+Summary:  ProBot is an interactive ChatBot to help with day to day tasks on general desktop and mobile environments.
+Home-page: UNKNOWN
+Author: agrawalavi
+Author-email: aagraw24@ncsu.edu
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: Apache License 2.0
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: ChatBot
