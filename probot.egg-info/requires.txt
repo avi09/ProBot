@@ -1,0 +1,4 @@
+kivy[full]
+nltk
+pandas
+yfinance

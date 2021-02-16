@@ -14,6 +14,7 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label
 from kivy.uix.button import Button
+from kivy.uix.image import Image
 import commands
 import nltk
 
@@ -76,11 +77,15 @@ class ProBot(App):
 
         widget_set["float"].add_widget(widget_set["heading"])
         widget_set["heading"].text = "<< " + "ProBot >>"
-        widget_set["heading"].size_hint = (1, 0.09)
-        widget_set["heading"].pos_hint = {'x': 0, 'y': 0.9}
+        widget_set["heading"].size_hint = (1, 0.1)
+        widget_set["heading"].pos_hint = {'x': 0.1, 'y': 0.9}
         widget_set["heading"].color = '#0096ff'
         widget_set["heading"].font_size = 36
         widget_set["heading"].halign = 'center'
+
+        widget_set["float"].add_widget(widget_set["logo"])
+        widget_set["entry_line_1"].size_hint = (0.1, 0.1)
+        widget_set["entry_line_1"].pos_hint = {'x': 0, 'y': 0.9}
 
         widget_set["float"].add_widget(widget_set["activity"])
         widget_set["activity"].background_color = '#ff0011'
@@ -101,6 +106,7 @@ class ProBot(App):
         widget_set["entry_line_2"] = TextInput()
         widget_set["heading"] = Label()
         widget_set["activity"] = TextInput()
+        widget_set["logo"] = Image()
         ProBot.init_widgets()
         print("Initialized GUI")
         print("Verifying NLTK libraries")

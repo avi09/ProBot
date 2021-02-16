@@ -1,7 +1,4 @@
-json
 kivy[full]
 nltk
-os
 pandas
-random
 yfinance

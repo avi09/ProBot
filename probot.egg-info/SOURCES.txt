@@ -1,0 +1,7 @@
+README.md
+setup.py
+probot.egg-info/PKG-INFO
+probot.egg-info/SOURCES.txt
+probot.egg-info/dependency_links.txt
+probot.egg-info/requires.txt
+probot.egg-info/top_level.txt
